@@ -19,3 +19,5 @@ git clone <repo URL>
 git push ____
 
 git pull ___
+
+git push origin <branchname>
