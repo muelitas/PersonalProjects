@@ -10,22 +10,14 @@
   *    
   * 
 ****************************************************************/ 
-
 #include <stdio.h>
 
-int triangularN(int n){
-	if(n == 1){
-		return 1;
-	}else{
-		return(n+triangularN(n-1));
-	}
-}
-
 int main(){
-
-	//show how to calculate a tn with a loop
-	//Then, show how to do it with a rec func
-	long int tn = triangularN(6);
-	printf("tn = %ld\n", tn);
+	int tn1 = 1;
+	int tn2 = 2;
+	int tn3 = tn2 + tn1;
+	int tn4 = tn3 + tn2;
+	int tn5 = tn4 + tn3;
+	printf("Fifth triangular number is: %d\n", tn5);
 	return 0;
 }
