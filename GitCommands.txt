@@ -4,6 +4,8 @@ git init
 
 git add <filename>
 
+git rm <filename>
+
 git commit -m <description of commit>
 
 git checkout -b <branchname>
