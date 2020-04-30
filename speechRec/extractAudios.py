@@ -1,6 +1,7 @@
 '''************************************************************
   * File:    extractAudios.py
-  * Author:  Mario Esparza
+  * Author1:  Mario Esparza
+  * Author2:  Luis Sanchez
   * Date:    04/27/2020
   * 
   * Given a video and a csv file, this program reads the csv
@@ -89,13 +90,13 @@ if(int(specs['channels']) > 1):
     data = data[:,0]
 else:
     data = data
-    
+
 #/home/mario/Desktop/Temporary/00001__48K_1CH_16B.wav
 filename = '_'+str(int(specs['sr']/1000))+'K' #append samplerate
 filename = filename+'_'+str(len(data.shape))+'CH' #append numOfChannels
 filename = filename+'_'+str(specs['bitDepth'])+'B' #append bitDepth info
 filename = filename + '.wav'
-    
+
 for i in range(len(starttimes)):
     start = int(specs['sr']*float(starttimes[i]))
     end = int(specs['sr']*float(endtimes[i]))

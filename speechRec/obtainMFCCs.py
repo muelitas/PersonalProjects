@@ -1,6 +1,7 @@
 '''************************************************************
   * File:    obtainMFCCs.py
-  * Author:  Mario Esparza
+  * Author1:  Mario Esparza
+  * Author2:  Luis Sanchez
   * Date:    04/28/2020
   * 
   * Given a directory with sub-directories containing audios, iterate
