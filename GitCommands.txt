@@ -1,0 +1,23 @@
+Temporary file. Will list Github commands here while I get used to them.
+
+git init
+
+git add <filename>
+
+git rm <filename>
+
+git commit -m <description of commit>
+
+git checkout -b <branchname>
+
+git checkout <branchname>
+
+git status
+
+git branch
+
+git clone <repo URL>
+
+git pull origin <branchname>
+
+git push origin <branchname>
