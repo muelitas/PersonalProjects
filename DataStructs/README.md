@@ -1,1 +1,1 @@
-The files in this folder will have personal implementations of different data structures and algorithms.
+The files in this folder will have personal implementations of different data structures and algorithms. So far, I have only used the book: Introcudtion to Algorithms, 3rd Edition, by Thomas H. Cormen.
