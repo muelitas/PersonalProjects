@@ -5,7 +5,17 @@
   * Date:     05/23/2020
   * 
   * Using moviepy, we extract a subclip from a video given the
-  * start and end (in seconds) of the desired subclip.
+  * start and end (in seconds) of the desired subclip. Note
+  * that the cropped video may not have the same configuration
+  * as the original one; i.e. kbps may result different, codec
+  * may result different, audio's SR may also result different.
+  * For a more reliable cropping, I have used the .sh file in
+  * this folder called "crop_video.sh".
+  *
+  * After running .sh file, I run the following instruction:
+  * 	ffmpeg -i input.MP4 -ss 00:00:00 -to 00:00:00 -c:v
+  * 	libx264 -b:v 24500K -maxrate 26000K -bufsize 12000K -c:a
+  * 	aac -b:a 256K output.MP4
   *
   * Tested in PopOS 18.04 LTS
   *
