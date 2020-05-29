@@ -1,10 +1,21 @@
-#Original script obtained from:
-#	https://gist.github.com/rafaelbiriba/7f2d7c6f6c3d6ae2a5cbCriando
-#To that script, I have added the installation of libx264
-#Once the file installs libraries and ffmpeg, I run the following command to crop video:
-#	ffmpeg -i input.MP4 -ss 00:06:49 -to 00:09:49 -c:v libx264 -b:v 24500K -maxrate
-#	26000K -bufsize 12000K -c:a aac -b:a 256K output.MP4
-
+###############################################################
+# File:     crop_video.sh
+# Author1:  Mario Esparza
+# Author2:  Luis Sanchez
+# Date:     05/25/2020
+#
+# We retrieved the original file from:
+# https://gist.github.com/rafaelbiriba/7f2d7c6f6c3d6ae2a5cbCriando
+# 
+# We have added the installation of libx264. After running .sh
+# file, we run the following instruction:
+#     ffmpeg -i input.MP4 -ss 00:00:00 -to 00:00:00 -c:v
+#     libx264 -b:v 24500K -maxrate 26000K -bufsize 12000K -c:a
+#     aac -b:a 256K output.MP4
+#
+# Tested in PopOS 18.04 LTS
+#
+###############################################################
 apt-get update
 apt-get -y install autoconf automake build-essential git-core libass-dev libgpac-dev libsdl1.2-dev libtheora-dev libtool libvdpau-dev libvorbis-dev libx11-dev libxext-dev libxfixes-dev pkg-config texi2html zlib1g-dev libmp3lame-dev nasm gcc yasm && true
 mkdir ~/ffmpeg_sources
