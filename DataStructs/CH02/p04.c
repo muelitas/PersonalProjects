@@ -11,41 +11,7 @@
   *
 ****************************************************************/ 
 #include <stdio.h>
-//Scans integer array
-void scanArray(int L, int arr[L]){
-	int i;
-	for(i=0;i<L;i++){
-		scanf("%d", &arr[i]);
-	}
-	return;
-}
-//Prints integer array
-void printArray(int L, int arr[L]){
-	int i;
-	for(i=0;i<L;i++){
-		printf("%d ", arr[i]);
-	}
-	printf("\n");
-	return;
-}
-//Sorts array of integers with Selection Sort
-void sort(int L, int arr[L]){
-	int i, j, newIndex, min;
-	for(i=0;i<L-1;i++){
-		min = arr[i];
-		for(j=i+1;j<L;j++){
-			if(arr[j]<min){
-				min = arr[j];
-				newIndex = j;
-			}
-		}
-		if(min != arr[i]){
-			arr[newIndex] = arr[i];
-			arr[i] = min;
-		}
-	}
-	return;
-}
+#include "ch2Funcs.h"
 
 int main(){
 	int L;
@@ -56,7 +22,7 @@ int main(){
 	scanArray(L, arr);
 	printf("These are the values you inputted:\n");
 	printArray(L, arr);
-	sort(L,arr);
+	selection_sort(L,arr);
 	printf("Sorted, your array looks as follows:\n");
 	printArray(L, arr);
 
