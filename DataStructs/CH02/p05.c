@@ -1,16 +1,20 @@
 /****************************************************************
-  * File:    p04.c
+  * File:    p05.c
   * Author:  Mario Esparza
   * Date:    05/25/2020
   * Book:    Introduction to Algorithms, 3rd Edition, by Cormen
   * 
-  * In this program I am solving selection sort, specified in 
-  * Exercise 2.2-2 of page 29. In addition to sorting function,
-  * I created two "function-helpers" as well; one that scans an
-  * integer array and another one that prints it. 
+  * With the help of pages 30 - 34, I created the merge sort
+  * algorithm (with some personal tweaks). Composed of two
+  * functions (merge_sort and merge), it grabs an integer array
+  * and sorts its values. As usual, also using two "function-
+  * helpers"; printArray and scanArray. This program can be used
+  * to solve excercise 2.3-1. Without knowing, I did excercise
+  * 2.3-2.
   *
 ****************************************************************/ 
 #include <stdio.h>
+#include <math.h>
 #include "ch2Funcs.h"
 
 int main(){
@@ -20,9 +24,11 @@ int main(){
 	int arr[L];
 	printf("Please input the values:\n");
 	scanArray(L, arr);
+
 	printf("These are the values you inputted:\n");
 	printArray(L, arr);
-	selection_sort(L,arr);
+
+	merge_sort_rec(arr, 0, L-1);
 	printf("Sorted, your array looks as follows:\n");
 	printArray(L, arr);
 
