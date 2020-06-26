@@ -124,6 +124,21 @@ int main(){
 	printf("Age: %d\n", stud2.age);
 	printf("GPA: %.2f\n", stud2.gpa);
 	printf("UNM ID: %d\n", stud2.unmid);
+	/*Notice that we could have also asked the user for
+	all three values in one scanf statement:*/
+	struct student stud3;
+	printf("Please provide the info of Student 3 in ");
+	printf("the following format (age-gpa-unmid):");
+	scanf("%d-%f-%d", &stud3.age, &stud3.gpa, &stud3.unmid);
+
+	/*Before I end this tutorial, it is valid to decla-
+	re multiple structures of the same type in a single
+	line. For example:*/
+	struct student stud4, stud5, stud6;
+	/*The line above creates three structures of type
+	student. All members inside these structures are
+	still random, you have to provide them with desired
+	values.*/
 
 	return 0;
 }
