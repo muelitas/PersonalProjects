@@ -9,8 +9,6 @@
   *	2. Conditions and "rules" when using global variables.
   *
 **************************************************************/
-//TODO add to Github
-//TODO add description
 #include <stdio.h>
 //Global Variables
 double globalDouble = 10.5;
@@ -155,7 +153,10 @@ int main(){
 
 	/*If you declare a global variable with the name 
 	myVar, you will not be able to declare any other
-	variable (local or global) with the same name.*/
+	variable (local or global) with the same name. I
+	mean, you will be able to, but you will be over-
+	riding variables and most likely obtain unexpected
+	results.*/
 	
 	/*There is one last thing I want to mention regar-
 	ding global variables. If you want to use a global
