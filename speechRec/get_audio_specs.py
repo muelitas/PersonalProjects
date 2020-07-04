@@ -39,9 +39,14 @@ def getAudioSpecs(audioFile):
         L = l.decode("utf-8") #convert from bytes to string
         
         #If audio is found in file, get all aforementioned specs
-        if L.startswith('Stream #0:0'):
+        if L.startswith('Stream #0:1'):
             #Prints information related only to the audio
             #print(L)
+            
+            #Check if audio is PCM
+            isAudioPCM = bool()
+            if(re.search(': pcm(.*?),', L)):
+                isAudioPCM = True
             
             #Get sample rate
             if (re.search(', (.*? Hz),', L)):
@@ -60,9 +65,11 @@ def getAudioSpecs(audioFile):
                 print("Num of channels is not 2, nor 1")
                 channels = -1
                 
-            #Get bit depth
-            if(re.search(', s(.*?),', L)):
-                BitDepth = re.search(', s[0-9]+\w,', L).group(0)
+            #Get bit depth only if audio is PCM
+            #https://en.wikipedia.org/wiki/Audio_bit_depth
+            if(re.search(', s(.*?),', L) and isAudioPCM):
+                BitDepth = re.search(', s[0-9]+[\w]*,', L).group(0)
+                print(f"Found BitDepth: {BitDepth}")
                 bitDepth = BitDepth[2:-1]
             else:
                 print("Couldn't find bit depth")
