@@ -39,7 +39,7 @@ def getAudioSpecs(audioFile):
         L = l.decode("utf-8") #convert from bytes to string
         
         #If audio is found in file, get all aforementioned specs
-        if L.startswith('Stream #0:1'):
+        if L.startswith('Stream #0:0'):
             #Prints information related only to the audio
             #print(L)
             
