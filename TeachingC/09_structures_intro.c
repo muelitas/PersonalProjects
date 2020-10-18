@@ -140,5 +140,7 @@ int main(){
 	still random, you have to provide them with desired
 	values.*/
 
+    /*TODO: Explain typedef*/
+
 	return 0;
 }
